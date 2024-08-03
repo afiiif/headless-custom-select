@@ -433,9 +433,6 @@ export function createCustomSelect<TOption, TMultiple extends boolean = false>(
       return;
     }
 
-    console.info('Here22');
-    // return;
-
     state.filteredOptions.forEach((group, groupIndex) => {
       $.append(elm.optionsContainer, [
         $('li', {
@@ -463,7 +460,6 @@ export function createCustomSelect<TOption, TMultiple extends boolean = false>(
             click: () => {
               if (!isDisabled) {
                 if (isMultiple) {
-                  console.info('Here');
                   toggleValue(option);
                 } else {
                   setValue(option as any);
